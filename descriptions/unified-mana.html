@@ -1,0 +1,115 @@
+<p><img src="https://raw.githubusercontent.com/SolJodowana/mod-page-assets/main/unified-mana/title.webp" alt="Unified Mana: One mana pool for every spell mod." width="100%"></p>
+<p>One unified mana pool for every supported magic mod, displayed on a single vanilla-style HUD bar!</p>
+<p>Unified Mana replaces separate personal mana pools with one shared system: <strong>Unified Mana Points (UMP)</strong>. Spells and tools from any supported mod draw from the same pool, regeneration fills it seamlessly, and native HUD bars are automatically hidden when a bridge is active.</p>
+<p>Supports <strong>Minecraft 1.21.1 (NeoForge)</strong>.</p>
+<blockquote>
+  <p>⚠️ <strong>Early Release Note (v0.9.0):</strong> Features the shared UMP pool, split HUD, and bridges for <strong>Ars Nouveau</strong>, <strong>Iron's Spells 'n Spellbooks</strong>, <strong>Mahou Tsukai</strong>, <strong>Botania Revived</strong>, <strong>Confluence: Otherworld</strong>, and <strong>Arcanum Unbound</strong>.</p>
+</blockquote>
+<p><img src="https://raw.githubusercontent.com/SolJodowana/mod-page-assets/main/unified-mana/clip-1.webp" alt="One bar for every spell mod" width="100%"></p>
+<p><img src="https://raw.githubusercontent.com/SolJodowana/mod-page-assets/main/unified-mana/clip-2.webp" alt="Bar states" width="49%"> <img src="https://raw.githubusercontent.com/SolJodowana/mod-page-assets/main/unified-mana/clip-3.webp" alt="One shared pool" width="49%"></p>
+<p><img src="https://raw.githubusercontent.com/SolJodowana/mod-page-assets/main/unified-mana/h-key-features-mechanics.webp" alt="Key Features & Mechanics" width="100%"></p>
+<ul>
+<li><strong>One Shared Pool (UMP):</strong> Cast an Ars Nouveau glyph spell, an Iron's Spells incantation, a Confluence magic weapon, an Arcanum sigil, or Mahou Tsukai magic — all draw directly from your unified UMP pool.</li>
+<li><strong>Vanilla-Style Split HUD:</strong> A clean mana bar aligned with the vanilla XP strip, split in the middle so your <strong>XP level number remains visible</strong>. Includes a left-to-right fill animation with an edge spark, low-mana pulse, and full-pool flash.</li>
+<li><strong>Compact Numeric Window:</strong> Displays <code>current / max</code> in a framed window next to the bar (configurable to <code>LEFT</code> or <code>RIGHT</code> side).</li>
+<li><strong>Smart Bridge Management:</strong> Native bars are hidden <em>only</em> when an active bridge is detected. Unsupported mods keep their default resources untouched.</li>
+<li><strong>No Double Accounting:</strong> Costs and regeneration rates are calculated once from the shared pool.</li>
+<li><strong>Server-Authoritative Sync:</strong> Server manages balance policy and syncs data to clients for seamless multiplayer consistency.</li>
+<li><strong>Source Diagnostics:</strong> Run <code>/unifiedmana sources</code> to inspect active bridges and see how much capacity each mod contributes to your pool.</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/SolJodowana/mod-page-assets/main/unified-mana/h-how-conversion-scaling-works.webp" alt="How Conversion & Scaling Works" width="100%"></p>
+<ul>
+<li><strong>Dynamic Capacity:</strong> Each supported mod contributes its native maximum to your UMP total via configurable conversion rates:<ul>
+<li><strong>Ars Nouveau:</strong> <code>1.5 UMP</code> per native point</li>
+<li><strong>Iron's Spells 'n Spellbooks:</strong> <code>2.0 UMP</code> per native point</li>
+<li><strong>Mahou Tsukai:</strong> <code>1.0 UMP</code> per native point</li>
+<li><strong>Confluence: Otherworld:</strong> <code>1.0 UMP</code> per native point <em>(20 mana per star)</em></li>
+<li><strong>Arcanum Unbound:</strong> <code>1.0 UMP</code> per native point</li></ul></li>
+<li><strong>Botania Spending Rules:</strong> Botania adds no pool capacity, as it lacks a personal mana pool. Its tools and rings spend UMP after your mana tablets/rings at <strong>2.67 Botania mana per UMP</strong>. The pool never recharges Botania items, and the world mana network remains untouched.</li>
+<li><strong>Global Cap:</strong> Pool total is capped at <strong>5,000 UMP</strong> by default (<code>global_mana_cap</code>). Because capacity is shared, individual mods may display higher native mana than their own default cap.</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/SolJodowana/mod-page-assets/main/unified-mana/h-requirements-mod-compatibility.webp" alt="Requirements & Mod Compatibility" width="100%"></p>
+<h3>📌 Requirements</h3>
+<ul>
+<li>Minecraft <strong>1.21.1</strong> <em>(Client & Server)</em></li>
+<li><a href="https://neoforged.net/" target="_blank" rel="nofollow">NeoForge</a> <strong>21.1.265+</strong> <em>(Java 21 required)</em></li>
+</ul>
+<h3>📚 Same Author Mods &amp; Ecosystem</h3>
+<ul>
+<li><a href="https://www.curseforge.com/minecraft/mc-mods/spells-atlas" target="_blank" rel="nofollow">Spell's Atlas</a> — Unified settings hub, stat integration, and spell history logging.</li>
+<li><a href="https://www.curseforge.com/minecraft/mc-mods/quintessence-elemental-spellcraft-runes" target="_blank" rel="nofollow">Quintessence: Elemental Spellcraft & Runes</a> — Native integration with pentagram spells and mana wells.</li>
+<li><a href="https://www.curseforge.com/minecraft/mc-mods/player-system" target="_blank" rel="nofollow">Player System</a> — Shared mana pool compatibility for System skill consumption.</li>
+<li><a href="https://www.curseforge.com/minecraft/mc-mods/artificiers-almanac" target="_blank" rel="nofollow">Artificer's Almanac</a> — Power modular staffs and Manalite cells through unified UMP.</li>
+</ul>
+<h3>🧩 Active Mod Bridges (Tested Versions)</h3>
+<p>Install the mods you use; if none are present, Unified Mana stays safely idle. Unsupported mod versions are left untouched with a log warning.</p>
+<table>
+<thead>
+<tr>
+<th>Mod</th>
+<th>Supported Version</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://www.curseforge.com/minecraft/mc-mods/ars-nouveau" target="_blank" rel="nofollow">Ars Nouveau</a></td>
+<td><code>5.13.x</code> <em>(tested 5.13.4)</em></td>
+<td>Personal mana pool, cost, regeneration, HUD</td>
+</tr>
+<tr>
+<td><a href="https://www.curseforge.com/minecraft/mc-mods/irons-spells-n-spellbooks" target="_blank" rel="nofollow">Iron's Spells 'n Spellbooks</a></td>
+<td><code>3.16.x</code> <em>(tested 3.16.3)</em></td>
+<td>Personal mana pool, cost, regeneration, HUD</td>
+</tr>
+<tr>
+<td><a href="https://www.curseforge.com/minecraft/mc-mods/mahou-tsukai" target="_blank" rel="nofollow">Mahou Tsukai</a></td>
+<td><code>1.36.x</code></td>
+<td>Personal mana only; gems, batteries &amp; circuits stay native</td>
+</tr>
+<tr>
+<td><a href="https://www.curseforge.com/minecraft/mc-mods/botania-revived" target="_blank" rel="nofollow">Botania Revived</a> <em>(needs <a href="https://www.curseforge.com/minecraft/mc-mods/patchouli" target="_blank" rel="nofollow">Patchouli</a>)</em></td>
+<td><code>1.0.x</code></td>
+<td>Spends from UMP; requires another bridged mod to provide capacity</td>
+</tr>
+<tr>
+<td><a href="https://www.curseforge.com/minecraft/mc-mods/confluence-otherworld" target="_blank" rel="nofollow">Confluence: Otherworld</a> <em>(needs <a href="https://www.curseforge.com/minecraft/mc-mods/curios" target="_blank" rel="nofollow">Curios API</a> & <a href="https://www.curseforge.com/minecraft/mc-mods/geckolib" target="_blank" rel="nofollow">GeckoLib</a>)</em></td>
+<td><code>1.2.x</code> <em>(tested 1.2.11)</em></td>
+<td>Personal mana (Terraria stars); weapons, potions &amp; mana mending use UMP; star HUD hidden</td>
+</tr>
+<tr>
+<td><a href="https://www.curseforge.com/minecraft/mc-mods/arcanum-unbound" target="_blank" rel="nofollow">Arcanum Unbound</a> <em>(needs <a href="https://www.curseforge.com/minecraft/mc-mods/curios" target="_blank" rel="nofollow">Curios API</a>)</em></td>
+<td><code>1.7.x</code> <em>(tested 1.7.0)</em></td>
+<td>Personal mana once profile is generated; instability, corruption &amp; overlay stay native</td>
+</tr>
+</tbody>
+</table>
+<h3>🔮 Planned Mod Bridges</h3>
+<ul>
+<li><a href="https://www.curseforge.com/minecraft/mc-mods/dragons-survival" target="_blank" rel="nofollow">Dragon Survival</a> <em>(pending confirmation of mana resource mechanics)</em></li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/SolJodowana/mod-page-assets/main/unified-mana/h-for-server-owners-modpack-creators.webp" alt="For Server Owners & Modpack Creators" width="100%"></p>
+<ul>
+<li><strong>Flexible Configs:</strong><ul>
+<li><code>unifiedmana-common.toml</code>: Configure global caps, conversion rates, per-bridge toggles, Botania rate, regeneration switch, and sync thresholds.</li>
+<li><code>unifiedmana-client.toml</code>: Customize HUD visibility, numbers, side offset (<code>LEFT</code>/<code>RIGHT</code>), and native bar hiding.</li></ul></li>
+<li><strong>Developer API:</strong> Includes a server API (<code>UnifiedManaAPI</code>, <code>ManaSourceProvider</code>) allowing addon authors to register custom mana sources and spend UMP.</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/SolJodowana/mod-page-assets/main/unified-mana/h-known-limits.webp" alt="Known Limits" width="100%"></p>
+<ul>
+<li><strong>Regeneration Toggle:</strong> Disabling regeneration in the config also blocks mana from potions and refunds, as they share the same internal path.</li>
+<li><strong>Pinned Versions:</strong> Supported mod versions are pinned; updating magic mods may require a matching Unified Mana build.</li>
+<li><strong>Botania with Ars Nouveau:</strong> With Ars Nouveau installed, Botania's own Ars bridge already spends from the pool, so the direct Botania source stays idle (<code>botania_direct_source_with_ars</code> forces both).</li>
+<li><strong>Confluence Conversion:</strong> If Confluence's own Ars Nouveau / Iron's Spells mana conversion is turned on, the Confluence bridge stays idle so spells are not charged twice. Every Confluence player has at least <code>20 UMP</code> of capacity (one star).</li>
+<li><strong>Arcanum Overlay:</strong> Arcanum's own mana overlay stays on screen (it also displays your sigil and instability) and shows the shared value in Arcanum points.</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/SolJodowana/mod-page-assets/main/unified-mana/h-notes-permissions.webp" alt="Notes & Permissions" width="100%"></p>
+<ul>
+<li><strong>AI Disclosure:</strong> Created with the assistance of AI tools.</li>
+<li><strong>Modpacks:</strong> Free to include in any modpack hosted on CurseForge or Modrinth!</li>
+</ul>
+<p>Found a bug or have a suggestion? Report it on <a href="https://github.com/SolJodowana/mods-issues-and-suggestions/issues" target="_blank" rel="nofollow">GitHub</a>.</p>
+<p><img src="https://raw.githubusercontent.com/SolJodowana/mod-page-assets/main/unified-mana/h-more.webp" alt="More mods" width="100%"></p>
+<p><a href="https://www.curseforge.com/minecraft/mc-mods/spells-atlas"><img src="https://raw.githubusercontent.com/SolJodowana/mod-page-assets/main/unified-mana/tile-spell.webp" alt="Spell's Atlas" width="49%"></a> <a href="https://www.curseforge.com/minecraft/mc-mods/artificiers-almanac"><img src="https://raw.githubusercontent.com/SolJodowana/mod-page-assets/main/unified-mana/tile-artificer.webp" alt="Artificer's Almanac" width="49%"></a></p>
+<p><a href="https://www.curseforge.com/minecraft/mc-mods/player-system"><img src="https://raw.githubusercontent.com/SolJodowana/mod-page-assets/main/unified-mana/tile-player.webp" alt="Player System" width="49%"></a> <a href="https://www.curseforge.com/minecraft/mc-mods/tempest-almanac"><img src="https://raw.githubusercontent.com/SolJodowana/mod-page-assets/main/unified-mana/tile-tempest.webp" alt="Tempest Almanac" width="49%"></a></p>
+<p><img src="https://raw.githubusercontent.com/SolJodowana/mod-page-assets/main/unified-mana/divider.webp" alt="" width="100%"></p>

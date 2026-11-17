@@ -1,0 +1,99 @@
+<p><img src="https://raw.githubusercontent.com/SolJodowana/mod-page-assets/main/bestiary-almanac/title.webp" alt="Bestiary Almanac: A collector's album of every creature." width="100%"></p>
+<p><strong>Bestiary Almanac</strong> keeps a living record of every creature you encounter. Each mob starts as a mysterious dark card with a question mark; get a clear look to reveal its card, defeat it to learn its combat stats, and keep hunting to master it completely!</p>
+<blockquote>
+  <p>⚠️ <strong>Early Development (v0.0.1):</strong> This mod is under active development. Settings, configs, and saved data structures may still evolve between <code>0.0.x</code> versions. Always back up your worlds before updating!</p>
+</blockquote>
+<p><img src="https://raw.githubusercontent.com/SolJodowana/mod-page-assets/main/bestiary-almanac/clip-1.webp" alt="Every creature gets a card" width="100%"></p>
+<p><img src="https://raw.githubusercontent.com/SolJodowana/mod-page-assets/main/bestiary-almanac/clip-2.webp" alt="Lore for every mob" width="49%"> <img src="https://raw.githubusercontent.com/SolJodowana/mod-page-assets/main/bestiary-almanac/clip-3.webp" alt="Search the album" width="49%"></p>
+<p><img src="https://raw.githubusercontent.com/SolJodowana/mod-page-assets/main/bestiary-almanac/h-key-features-album-structure.webp" alt="Key Features & Album Structure" width="100%"></p>
+<ul>
+<li><strong>Automatic Mod Compatibility:</strong> Organizes creatures into chapters (<em>Overworld</em>, <em>Nether</em>, <em>The End</em>, plus dedicated chapters for every installed mod that adds living entities). Requires zero setup or custom code from other mod authors!</li>
+<li><strong>Collector Cards:</strong> Grid-based pages featuring real animated 3D models of each creature, current rank status, and kill counts. Unmet creatures appear as shrouded silhouettes.</li>
+<li><strong>Interactive 3D Drawer:</strong> Click any unlocked card to open a detailed drawer. Inspect a slowly rotating 3D model, drag to rotate it freely, and view habitat details, combat stats, and drops.</li>
+<li><strong>Robust Search &amp; Filtering:</strong> Instantly search by name across all chapters, or toggle filters to display only creatures you have seen or defeated.</li>
+<li><strong>Intuitive Navigation:</strong> Seamlessly browse cards using keyboard arrow keys and turn pages with your mouse scroll wheel.</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/SolJodowana/mod-page-assets/main/bestiary-almanac/h-the-four-ranks-of-mastery.webp" alt="The Four Ranks of Mastery" width="100%"></p>
+<table>
+<thead>
+<tr>
+<th id="rank">Rank</th>
+<th id="requirements">Requirements</th>
+<th id="what_you_learn_&amp;_unlock">What You Learn &amp; Unlock</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>I. Seen</strong></td>
+<td>Get a clear look at it (within 24 blocks)</td>
+<td>Where it lives (habitat biomes &amp; structures)</td>
+</tr>
+<tr>
+<td><strong>II. Defeated</strong></td>
+<td>1 Kill</td>
+<td>Health, attack speed, armor, and drops you have actually witnessed</td>
+</tr>
+<tr>
+<td><strong>III. Veteran</strong></td>
+<td>25 Kills</td>
+<td>Combat traits and weaknesses (e.g., Smite vulnerability, fire immunity)</td>
+</tr>
+<tr>
+<td><strong>IV. Master</strong></td>
+<td>100 Kills</td>
+<td>Complete lore background and a permanent <strong>+10% damage bonus</strong> against that mob type!</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+  <p><em>Note: Boss creatures require 5x fewer kills to rank up. Every numerical threshold is fully configurable in the server settings.</em></p>
+</blockquote>
+<p><img src="https://raw.githubusercontent.com/SolJodowana/mod-page-assets/main/bestiary-almanac/h-opening-the-book.webp" alt="Opening the Book" width="100%"></p>
+<p>You can access your Bestiary in four convenient ways:</p>
+<ol>
+<li><strong>Codex Hub:</strong> Open with <strong><code>H</code></strong> (from the <em>Arcane Framework</em>) to see the book alongside your other Almanac volumes.</li>
+<li><strong>Dedicated Hotkey:</strong> Bind a custom key in your Controls menu (<em>Open the Bestiary</em>).</li>
+<li><strong>Inventory Screen Icon:</strong> Pin the book inside the Codex Hub, then drag its shortcut icon anywhere on your inventory screen.</li>
+<li><strong>Physical Bestiary Item:</strong> Right-click the item in your hand. Craft it shapelessly from a Book and a Spyglass, or grab it from the creative <em>Tools</em> tab.</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/SolJodowana/mod-page-assets/main/bestiary-almanac/h-built-for-modpacks-servers.webp" alt="Built for Modpacks & Servers" width="100%"></p>
+<ul>
+<li><strong>Real Habitats:</strong> Spawning data is read directly from active world generation lists, automatically including biomes and structures from datapacks and mods.</li>
+<li><strong>Dynamic Attributes:</strong> Stats are pulled straight from the game engine. No compatibility patches are needed for modded creatures to be fully tracked.</li>
+<li><strong>Custom Lore &amp; Tags:</strong> Mods or resource packs can inject lore using a single lang key (<code>bestiary_almanac.lore.&lt;mod&gt;.&lt;creature&gt;</code>). Use tags like <code>bestiary_almanac:hidden</code> to exclude a mob or <code>bestiary_almanac:boss</code> to apply boss thresholds.</li>
+<li><strong>Server-Authoritative Progress:</strong> Progression is saved per player on the server side. Modified clients cannot cheat or unlock cards illegitimately, and player deaths do not reset your progress.</li>
+<li><strong>Spell Atlas Integration:</strong> If you are upgrading from <em>Spell Atlas 2.0+</em>, your previous magic mob kill counts are automatically imported into the Bestiary the first time you join a world (can be toggled off via <code>importSpellAtlas</code>).</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/SolJodowana/mod-page-assets/main/bestiary-almanac/h-operator-commands.webp" alt="Operator Commands" width="100%"></p>
+<ul>
+<li><code>/bestiary grant &lt;players&gt; &lt;creature&gt; &lt;rank 0-4&gt;</code> — Instantly sets a creature's rank for specified players.</li>
+<li><code>/bestiary import &lt;players&gt;</code> — Re-runs the one-time Spell Atlas kill import.</li>
+<li><code>/bestiary reset &lt;players&gt;</code> — Clears all Bestiary progress.</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/SolJodowana/mod-page-assets/main/bestiary-almanac/h-requirements-mod-compatibility.webp" alt="Requirements & Mod Compatibility" width="100%"></p>
+<h3 id="📌-requirements">📌 Requirements</h3>
+<ul>
+<li>Minecraft <strong>1.21.1</strong> <em>(Client &amp; Server)</em></li>
+<li><a href="https://neoforged.net/" rel="noopener noreferrer" target="_blank">NeoForge</a> <strong>21.1.250+</strong> <em>(Java 21 required)</em></li>
+<li><a href="https://www.curseforge.com/minecraft/mc-mods/arcane-framework" rel="noopener noreferrer" target="_blank">Arcane Framework</a> <strong>0.0.1+</strong> <em>(Required library)</em></li>
+<li><strong>Optional:</strong> <a href="https://www.curseforge.com/minecraft/mc-mods/spells-atlas" rel="noopener noreferrer" target="_blank">Spell's Atlas</a> <em>(v2.0+ for one-time kill data import)</em></li>
+</ul>
+<h3 id="📚-same-author-mods--ecosystem">📚 Same Author Mods &amp; Ecosystem</h3>
+<ul>
+<li><a href="https://www.curseforge.com/minecraft/mc-mods/spells-atlas" rel="noopener noreferrer" target="_blank">Spell's Atlas</a> — Unified settings hub, progression tracking, and spell encyclopedia.</li>
+<li><a href="https://www.curseforge.com/minecraft/mc-mods/arcane-framework" rel="noopener noreferrer" target="_blank">Arcane Framework</a> — Core library providing the Codex Hub and rendering engine.</li>
+<li><a href="https://www.curseforge.com/minecraft/mc-mods/artificiers-almanac" rel="noopener noreferrer" target="_blank">Artificer's Almanac</a> — Modular magical engineering and craft.</li>
+<li><a href="https://www.curseforge.com/minecraft/mc-mods/tempest-almanac" rel="noopener noreferrer" target="_blank">Tempest Almanac</a> — Weather manipulation, storm magic, and atmospheric rituals.</li>
+<li><a href="https://www.curseforge.com/minecraft/mc-mods/bookbinders-almanac" rel="noopener noreferrer" target="_blank">Bookbinder's Almanac</a> — Custom tomes and scriptorium craft.</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/SolJodowana/mod-page-assets/main/bestiary-almanac/h-feedback-notes-permissions.webp" alt="Feedback, Notes & Permissions" width="100%"></p>
+<ul>
+<li><strong>Gameplay Impact:</strong> The Rank IV damage bonus is the only active combat modifier (set <code>masterBonusPercent</code> to <code>0</code> in configs to disable it). The mod adds just one item and recipe, with zero world-gen changes.</li>
+<li><strong>Feedback &amp; Suggestions:</strong> Your input helps shape the mod! Leave a comment below or open an issue on <a href="https://github.com/SolJodowana/mods-issues-and-suggestions/issues" rel="noopener noreferrer" target="_blank">GitHub</a>.</li>
+<li><strong>AI Disclosure:</strong> Created with the assistance of AI tools.</li>
+<li><strong>Modpacks:</strong> Free to include in any modpack hosted on CurseForge or Modrinth!</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/SolJodowana/mod-page-assets/main/bestiary-almanac/h-more.webp" alt="More Iron's Spells addons" width="100%"></p>
+<p><a href="https://www.curseforge.com/minecraft/mc-mods/spells-atlas"><img src="https://raw.githubusercontent.com/SolJodowana/mod-page-assets/main/bestiary-almanac/tile-spell.webp" alt="Spell's Atlas" width="49%"></a> <a href="https://www.curseforge.com/minecraft/mc-mods/artificiers-almanac"><img src="https://raw.githubusercontent.com/SolJodowana/mod-page-assets/main/bestiary-almanac/tile-artificer.webp" alt="Artificer's Almanac" width="49%"></a></p>
+<p><a href="https://www.curseforge.com/minecraft/mc-mods/tempest-almanac"><img src="https://raw.githubusercontent.com/SolJodowana/mod-page-assets/main/bestiary-almanac/tile-tempest.webp" alt="Tempest Almanac" width="49%"></a> <a href="https://www.curseforge.com/minecraft/mc-mods/bookbinders-almanac"><img src="https://raw.githubusercontent.com/SolJodowana/mod-page-assets/main/bestiary-almanac/tile-bookbinder.webp" alt="Bookbinder's Almanac" width="49%"></a></p>
+<p><img src="https://raw.githubusercontent.com/SolJodowana/mod-page-assets/main/bestiary-almanac/divider.webp" alt="" width="100%"></p>

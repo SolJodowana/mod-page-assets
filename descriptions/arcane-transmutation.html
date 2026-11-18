@@ -1,0 +1,59 @@
+<p><img src="https://raw.githubusercontent.com/SolJodowana/mod-page-assets/main/arcane-transmutation/title.webp" alt="Arcane Transmutation: Equivalent exchange for Arcane Storage Network." width="100%"></p>
+<p>Equivalent exchange for your <strong>Arcane Storage Network</strong>! Sacrifice excess items to learn them, bank their Equivalence Value (EV), and materialize any known item right inside your existing network window.</p>
+<p>Supports <strong>Minecraft 26.1.2 (NeoForge)</strong>.</p>
+<blockquote>
+  <p>⚠️ <strong>Work in Progress:</strong> This addon is under active development—UI layouts, icons, and default value tables may change in future updates. Always back up your worlds before updating!</p>
+</blockquote>
+<p><img src="https://raw.githubusercontent.com/SolJodowana/mod-page-assets/main/arcane-transmutation/h-how-it-works.webp" alt="How It Works" width="100%"></p>
+<ol>
+<li>Craft an <strong>Equivalence Matrix</strong> and right-click your <strong>Core Pylon</strong> to unlock the <strong>Transmutation</strong> tab in every Arcane Interface.</li>
+<li>Place an item on your cursor and press <strong>Sacrifice</strong>. The first sacrifice <strong>learns</strong> the item (consuming one copy), while every subsequent copy adds its <strong>Equivalence Value (EV)</strong> to the network's shared reserve.</li>
+<li>Click any known item in the grid to materialize one copy, or <code>Shift + Click</code> for a full stack.</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/SolJodowana/mod-page-assets/main/arcane-transmutation/h-fair-balanced-by-design.webp" alt="Fair & Balanced by Design" width="100%"></p>
+<ul>
+<li><strong>Pure Bookkeeping, No Exploits:</strong> Items are bought and sold using the exact same value table—no sequence of conversions can generate free value.</li>
+<li><strong>Plain Items Only:</strong> Items with extra data (durability damage, enchantments, custom names, or container contents) are automatically rejected to prevent duplication or accidental data loss.</li>
+<li><strong>Shared Network Pool:</strong> Learned items and EV reserves belong to the <strong>network</strong>, not individual players, following your Arcane Storage Network access permissions and matching all three visual themes.</li>
+<li><strong>Inventory-Safe &amp; Server-Validated:</strong> If your inventory fills up mid-craft, you are charged only for what actually fits. All transactions and permissions are verified server-side.</li>
+<li><strong>Non-Destructive Toggle:</strong> Disabling the addon in the config safely preserves all stored knowledge and EV reserves.</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/SolJodowana/mod-page-assets/main/arcane-transmutation/h-requirements-mod-compatibility.webp" alt="Requirements & Mod Compatibility" width="100%"></p>
+<h3 id="📌-requirements">📌 Requirements</h3>
+<ul>
+<li><a href="https://www.curseforge.com/minecraft/mc-mods/arcane-storage-network-simple-magic-storage" rel="noopener noreferrer" target="_blank">Arcane Storage Network</a> <em>(0.0.1+ | Required</em></li>
+<li><strong>NeoForge 26.1.2.112+</strong> <em>(Minecraft 26.1.2 | Java 25 required)</em></li>
+</ul>
+<h3 id="📚-same-author-mods--ecosystem">📚 Same Author Mods &amp; Ecosystem</h3>
+<ul>
+<li><a href="https://www.curseforge.com/minecraft/mc-mods/arcane-storage-network-simple-magic-storage" rel="noopener noreferrer" target="_blank">Arcane Storage Network</a> — Core wireless storage system required for this addon.</li>
+<li><a href="https://www.curseforge.com/minecraft/mc-mods/spells-atlas" rel="noopener noreferrer" target="_blank">Spell's Atlas</a> — Unified settings hub and guide integration.</li>
+<li><a href="https://www.curseforge.com/minecraft/mc-mods/quintessence-elemental-spellcraft-runes" rel="noopener noreferrer" target="_blank">Quintessence: Elemental Spellcraft &amp; Runes</a> — Convert excess magical drops and reagents into useful building or crafting materials.</li>
+<li><a href="https://www.curseforge.com/minecraft/mc-mods/player-system" rel="noopener noreferrer" target="_blank">Player System</a> — Transmute excess dungeon loot and monster drops into practical resources.</li>
+<li><a href="https://www.curseforge.com/minecraft/mc-mods/folkforge-goblin-villages" rel="noopener noreferrer" target="_blank">Goblin Villages</a> — Recycle spare raid drops and surplus materials.</li>
+</ul>
+<h3 id="🧩-optional-mod-integrations">🧩 Optional Mod Integrations</h3>
+<ul>
+<li><strong>Recipe Viewers:</strong> Full recipe support for <a href="https://www.curseforge.com/minecraft/mc-mods/jei" rel="noopener noreferrer" target="_blank">JEI</a> and <a href="https://www.curseforge.com/minecraft/mc-mods/emi" rel="noopener noreferrer" target="_blank">EMI</a>.</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/SolJodowana/mod-page-assets/main/arcane-transmutation/h-for-server-owners-modpack-creators.webp" alt="For Server Owners & Modpack Creators" width="100%"></p>
+<ul>
+<li><strong>Datapack-Driven Values:</strong> Define custom EV tables and item exclusions via lightweight JSON files. Built-in values cover vanilla basics (stone, logs, ores, ingots, redstone, gems, netherite scrap, and core mob drops), while unlisted modded items are safely refused by default.</li>
+<li><strong>Granular Configs:</strong> Toggle the addon or matrix independently, disable learning, adjust whether learning consumes an item, cap batch sizes, enforce blacklists, or set fallback default values.</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/SolJodowana/mod-page-assets/main/arcane-transmutation/h-faq.webp" alt="FAQ" width="100%"></p>
+<ul>
+<li><strong>Does it work standalone?</strong> No, it requires <strong>Arcane Storage Network</strong> (the main mod works completely fine without this addon).</li>
+<li><strong>Why is my modded item refused?</strong> Unlisted items have no EV by default to prevent balance issues. Assign values via datapack or enable default fallback values in the config.</li>
+<li><strong>Can I trade a stack of dirt for diamonds?</strong> No—dirt is worth <code>1 EV</code>, while a single diamond costs <code>1,024 EV</code>.</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/SolJodowana/mod-page-assets/main/arcane-transmutation/h-feedback-notes-permissions.webp" alt="Feedback, Notes & Permissions" width="100%"></p>
+<ul>
+<li><strong>Feedback &amp; Suggestions:</strong> Your input helps shape the mod! I am completely open to balance suggestions, feature ideas, and bug reports—leave a comment below or open an issue on <a href="https://github.com/SolJodowana/mods-issues-and-suggestions/issues" rel="noopener noreferrer" target="_blank">GitHub</a>.</li>
+<li><strong>AI Disclosure:</strong> Created with the assistance of AI tools.</li>
+<li><strong>Modpacks:</strong> Free to include in any modpack hosted on CurseForge or Modrinth!</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/SolJodowana/mod-page-assets/main/arcane-transmutation/h-more.webp" alt="More mods" width="100%"></p>
+<p><a href="https://www.curseforge.com/minecraft/mc-mods/arcane-storage-network-simple-magic-storage"><img src="https://raw.githubusercontent.com/SolJodowana/mod-page-assets/main/arcane-transmutation/tile-asn.webp" alt="Arcane Storage" width="49%"></a> <a href="https://www.curseforge.com/minecraft/mc-mods/spells-atlas"><img src="https://raw.githubusercontent.com/SolJodowana/mod-page-assets/main/arcane-transmutation/tile-spell.webp" alt="Spell's Atlas" width="49%"></a></p>
+<p><a href="https://www.curseforge.com/minecraft/mc-mods/twilight-forge-twilight-forest-addon"><img src="https://raw.githubusercontent.com/SolJodowana/mod-page-assets/main/arcane-transmutation/tile-twilight.webp" alt="Twilight Forge" width="49%"></a> <a href="https://www.curseforge.com/minecraft/mc-mods/colossi"><img src="https://raw.githubusercontent.com/SolJodowana/mod-page-assets/main/arcane-transmutation/tile-colossi.webp" alt="Colossi for Sable" width="49%"></a></p>
+<p><img src="https://raw.githubusercontent.com/SolJodowana/mod-page-assets/main/arcane-transmutation/divider.webp" alt="" width="100%"></p>

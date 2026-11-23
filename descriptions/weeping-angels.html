@@ -1,0 +1,98 @@
+<p><a href="https://tally.so/r/GepONO" target="_blank" rel="nofollow noopener"><img src="https://raw.githubusercontent.com/SolJodowana/mod-page-assets/main/weeping-angels/qa.webp" alt="Q&amp;A - ask a question here" width="100%"></a></p>
+<p style="text-align:center"><strong>Questions or ideas? Ask here:</strong> <a href="https://tally.so/r/GepONO" target="_blank" rel="nofollow noopener">https://tally.so/r/GepONO</a></p>
+<p><img src="https://raw.githubusercontent.com/SolJodowana/mod-page-assets/main/weeping-angels/title.webp" alt="Weeping Angel: Statues that move when nobody watches." width="100%"></p>
+<p><strong>Statues that move only when nobody is watching.</strong></p>
+<p>Deep underground, amid the old stone of dungeons and mineshafts, stand statues of angels with their hands covering their faces. Some are harmless decoration. Some are not.</p>
+<p>An angel remains <strong>frozen while any player can see it</strong>. Look away&mdash;even for a second&mdash;and it comes for you. It stalks through corridors, slips around corners in a blink, and grabs when it closes the distance. Keep your eyes on it, back away, and it can never touch you&hellip; until you have to turn around.</p>
+<p>Supports <strong>Minecraft 26.1.2 (NeoForge)</strong> <em>(Java 25 required)</em>.</p>
+<p><img src="https://raw.githubusercontent.com/SolJodowana/mod-page-assets/main/weeping-angels/clip-1.webp" alt="Statues that move only when nobody is watching" width="100%"></p>
+<p><img src="https://raw.githubusercontent.com/SolJodowana/mod-page-assets/main/weeping-angels/clip-2.webp" alt="Every pose of an angel" width="49%"> <img src="https://raw.githubusercontent.com/SolJodowana/mod-page-assets/main/weeping-angels/clip-3.webp" alt="Statue, standard and advanced angel" width="49%"></p>
+<p><img src="https://raw.githubusercontent.com/SolJodowana/mod-page-assets/main/weeping-angels/h-the-one-rule-observation.webp" alt="The One Rule: Observation" width="100%"></p>
+<p>An angel counts as <strong>observed</strong> when at least one eligible player:</p>
+<ul>
+<li>Is within <strong>24 blocks</strong>,</li>
+<li>Has the angel inside a <strong>100-degree view cone</strong>, and</li>
+<li>Has an unobstructed line of sight to its body <em>(opaque walls and closed doors block sight; glass does not)</em>.</li>
+</ul>
+<p>While observed, an angel cannot move, teleport, or finish a grab&mdash;holding its motionless, face-covering pose with zero breathing, fluttering, or head movement.</p>
+<ul>
+<li><strong>Group Protection:</strong> <em>Any</em> eligible player keeping the angel in view freezes it for everyone nearby. It resumes moving only when nobody sees it.</li>
+<li><strong>Who Counts:</strong> Spectators never count, and Creative mode players do not count by default <em>(configurable)</em>. Players afflicted with <em>Blindness</em> or <em>Darkness</em> cannot see it and do not count as observers.</li>
+<li><strong>Server-Authoritative:</strong> All observation checks and AI states are decided strictly on the server.</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/SolJodowana/mod-page-assets/main/weeping-angels/h-unobserved-behavior.webp" alt="Unobserved Behavior" width="100%"></p>
+<ol>
+<li><strong>Awakening:</strong> Wakes up when an eligible player enters its activation range without looking at it. Far from players, angels remain dormant with negligible overhead.</li>
+<li><strong>Stalking:</strong> Pursues the nearest target&mdash;favoring players who are not actively watching&mdash;and commits to a target for a while rather than jittering between players.</li>
+<li><strong>Teleportation:</strong> Teleports only when its path is blocked <em>(and <strong>Advanced Angels</strong> also teleport to flank)</em>. Never lands inside a player's view, never within 4 blocks of any player, never inside blocks or liquids, and never forces chunk loads.</li>
+<li><strong>The Grab:</strong> Within reach and with a clear line of sight, it begins a <strong>1.2-second wind-up</strong> accompanied by an audible stone strain. Looking at the angel or stepping out of reach cancels the grab. If the wind-up finishes while unseen, the grab <strong>kills</strong> by default <em>(bypasses armor, though Totems of Undying still save you)</em>, followed by a brief recovery cooldown.</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/SolJodowana/mod-page-assets/main/weeping-angels/h-content-entities.webp" alt="Content & Entities" width="100%"></p>
+<table>
+<thead>
+<tr>
+<th id="entity_/_block">Entity / Block</th>
+<th id="details_&amp;_behavior">Details &amp; Behavior</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Weeping Angel Statue</strong></td>
+<td>Harmless 2-block-tall decorative statue on a stepped pedestal. Faces toward you when placed, breaks as a single block <em>(pickaxe required)</em>, drops itself, and uses no block entity or tick logic.</td>
+</tr>
+<tr>
+<td><strong>Standard Angel</strong></td>
+<td>The default hunter: <code>16</code> awareness range, <code>12</code> activation range, normal speed, and teleports up to <code>8</code> blocks every <code>10</code> seconds when blocked.</td>
+</tr>
+<tr>
+<td><strong>Advanced Angel</strong></td>
+<td>Rare and deadlier: <code>24</code> awareness range, <code>18</code> activation range, <code>1.5x</code> speed, teleports up to <code>12</code> blocks every <code>7</code> seconds, and may flank. Appears slightly darker with no glow or extra warning.</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>Combat &amp; Immunities:</strong> Angels have <code>100</code> HP, drop no loot, and are immune to fire, drowning, and suffocation.</li>
+<li><strong>Creative &amp; Testing:</strong> Spawn eggs for both Standard and Advanced angels are available in the creative tab. They never spawn naturally in open caves or on the surface.</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/SolJodowana/mod-page-assets/main/weeping-angels/h-underground-generation-modpacks.webp" alt="Underground Generation & Modpacks" width="100%"></p>
+<p>Statues generate <strong>exclusively underground</strong> during world generation:</p>
+<ul>
+<li><strong>Dungeons:</strong> <code>1&ndash;2</code> around the spawner room.</li>
+<li><strong>Abandoned Mineshafts:</strong> Sparse placements.</li>
+<li><strong>Ancient Cities:</strong> More frequent and more dangerous.</li>
+<li><strong>Strongholds:</strong> Rare placements.</li>
+</ul>
+<p>Across ten placements, roughly seven are decorative statues, two or three are <strong>Standard Angels</strong>, and around one in twenty is an <strong>Advanced Angel</strong>. Each chunk caps out at two hostile angels <em>(max one Advanced)</em> while maintaining spacing between statues. Generation relies strictly on the chunk being generated&mdash;reloading chunks never duplicates statues, and existing worlds only receive statues in newly generated chunks.</p>
+<ul>
+<li><strong>Modpack Structure Tag:</strong> Add structure IDs to <code>weepingangels:extra_underground</code> to place statues inside modded underground structures.</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/SolJodowana/mod-page-assets/main/weeping-angels/h-configuration-server-play.webp" alt="Configuration & Server Play" width="100%"></p>
+<p>Configure <code>config/&lt;world&gt;/weepingangels-server.toml</code> <em>(automatically synced to clients)</em>:</p>
+<ul>
+<li><strong>Observation &amp; Variants:</strong> Observation range, view cone angle, Creative observer toggle, plus per-variant awareness, activation range, speed multiplier, teleport range/cooldown, and teleportation toggle.</li>
+<li><strong>Grab &amp; Lethality:</strong> Wind-up duration, cooldown, <strong>lethal grab toggle</strong>, and non-lethal damage amount.</li>
+<li><strong>Worldgen, Audio &amp; Debug:</strong> Generation toggle, decorative/standard/advanced weights, per-structure toggles, minimum statue spacing, hostile per-chunk cap, sound volume, and state/placement debug logging.</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/SolJodowana/mod-page-assets/main/weeping-angels/h-good-to-know-survival-tips.webp" alt="Good to Know & Survival Tips" width="100%"></p>
+<ul>
+<li><strong>Client &amp; Server:</strong> Install on <strong>both the server and every client</strong>.</li>
+<li><strong>Atmospheric Audio:</strong> Uses quiet stone scrapes and creaks&mdash;no jump-scare stingers, music, or wall-piercing radar cues.</li>
+<li><strong>Survival Tips:</strong>
+<ul>
+<li>Never turn your back on a statue you haven't verified.</li>
+<li>Putting a wall, pillar, or closed door between you and an angel blocks <em>your</em> line of sight too&mdash;letting it move.</li>
+<li>Watch from multiple angles in multiplayer, and keep lighting in mind so darkness doesn't hide an approaching threat.</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/SolJodowana/mod-page-assets/main/weeping-angels/h-feedback-notes-permissions.webp" alt="Feedback, Notes & Permissions" width="100%"></p>
+<ul>
+<li><strong>Feedback &amp; Suggestions:</strong> Have balance feedback, structure ideas, or a bug report? Leave a comment below or open an issue on <a href="https://github.com/SolJodowana/mods-issues-and-suggestions/issues" target="_blank" rel="noopener noreferrer">GitHub</a>.</li>
+<li><strong>AI Disclosure:</strong> Created with the assistance of AI tools.</li>
+<li><strong>Modpacks:</strong> Free to include in any modpack hosted on CurseForge or Modrinth!</li>
+</ul>
+<p><em>All Rights Reserved.</em></p>
+<p><img src="https://raw.githubusercontent.com/SolJodowana/mod-page-assets/main/weeping-angels/h-more.webp" alt="More mods" width="100%"></p>
+<p><a href="https://www.curseforge.com/minecraft/mc-mods/overlords-challenging-new-bosses"><img src="https://raw.githubusercontent.com/SolJodowana/mod-page-assets/main/weeping-angels/tile-overlords.webp" alt="Overlords New Bosses" width="49%"></a> <a href="https://www.curseforge.com/minecraft/mc-mods/heavens-artifacts"><img src="https://raw.githubusercontent.com/SolJodowana/mod-page-assets/main/weeping-angels/tile-heaven.webp" alt="Heaven's Artifacts" width="49%"></a></p>
+<p><a href="https://www.curseforge.com/minecraft/mc-mods/mob-origins-for-neorigins-all-vanilla-minecraft"><img src="https://raw.githubusercontent.com/SolJodowana/mod-page-assets/main/weeping-angels/tile-mob.webp" alt="Mob Origins" width="49%"></a> <a href="https://www.curseforge.com/minecraft/mc-mods/elemental-motes"><img src="https://raw.githubusercontent.com/SolJodowana/mod-page-assets/main/weeping-angels/tile-motes.webp" alt="Elemental Motes" width="49%"></a></p>
+<p><img src="https://raw.githubusercontent.com/SolJodowana/mod-page-assets/main/weeping-angels/divider.webp" alt="" width="100%"></p>
